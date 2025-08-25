@@ -1,69 +1,202 @@
-Màu sắc & phong cách tổng thể:
+Nhiệm vụ
+Thiết kế lại màn hình Home của ứng dụng di động “90+ Quiz” theo phong cách dark mode hiện đại, thể thao, tinh gọn, dễ đọc và nhất quán. Dựa trên ảnh gốc đính kèm (hiện có thanh tiêu đề, banner update, thống kê ✓/✗, tiêu đề hướng dẫn chọn game và 3 thẻ trò chơi).
 
-Nền màu xanh đậm (#0d1a23 hoặc tương tự).
+Thiết bị & khung lưới
 
-Chữ chính màu trắng, một số nút nhấn và điểm nhấn màu vàng (#FFD700) và xanh dương sáng (#00AEEF).
+Kích thước khung thiết kế: Android 1080×2400 px (tỷ lệ 20:9).
 
-Giao diện phẳng, tối giản, tập trung vào nội dung.
+Lưới: 12 cột, gutter 16 px, margin hai bên 24 px.
 
-Thanh đầu trang:
+Khoảng cách dọc theo thang 8: 8/12/16/24/32/40 px.
 
-Logo FUTBOL11 nằm ở giữa trên cùng, màu vàng và xanh.
+Nhận diện & màu sắc (Design tokens)
 
-Góc phải có 2 biểu tượng mạng xã hội: Instagram và Twitter.
+Nền app: #0B1220 (dark-900).
 
-Dưới logo có một thanh thông báo "Futbol11 Awards for the 2024/25 Season Vote here" viền vàng, chữ trắng và link chữ màu xanh.
+Bề mặt/Surface card: #111827 (dark-800).
 
-Thông tin điểm số hằng ngày (Daily score):
+Viền mềm: #1F2937 (dark-700), opacity 60%.
 
-Hộp ở góc phải: nền xanh đậm, hiển thị điểm số ngày với biểu tượng check xanh (✓) và dấu X đỏ (✗).
+Primary-Blue (cho “Quiz”, nút, highlight): #3B82F6.
 
-Tiêu đề chính:
+Accent-Yellow (cho “90+”, badge NEW): #F6C12A.
 
-"Select the football game you want to play:" ở giữa, màu trắng.
+Trạng thái: Green #22C55E (✓ thắng), Red #EF4444 (✗ thua).
 
-Danh sách các chế độ chơi (Cards Game):
+Chữ chính: #E5E7EB (high), chữ phụ: #9CA3AF (medium).
 
-Hiển thị dạng grid 3 cột, nhiều hàng.
+Focus ring: xanh dương 24% alpha. Tất cả cặp màu đạt contrast ≥ 4.5:1.
 
-Mỗi ô game gồm:
+Typography
 
-Ảnh minh họa.
+Font: Inter hoặc Roboto.
 
-Nút PLAY nền xanh đậm, chữ trắng.
+Hệ thống chữ:
 
-Tên game: Futbol11 Legacy, Impostor, Grid, Pyramid, Connections, Clubs, Link, Bingo, v.v.
+App Title (H1): 28–32 px, Bold.
 
-Một số có nhãn NEW màu vàng (vd: Futbol11 Legacy).
+Section Title (H2): 20–22 px, Semibold.
 
-Mỗi card thiết kế tối giản, hình ảnh đại diện game là icon nhỏ.
+Card Title: 18 px, Semibold.
 
-Prompt để thiết kế app mobile với giao diện tương tự:
+Body/Description: 14–16 px, Regular.
 
-Prompt (dùng cho AI design như MidJourney hoặc Figma AI plugin):
+Badge/Meta: 12–13 px, Medium.
 
-"Thiết kế giao diện mobile app tối giản về trò chơi bóng đá, nền màu xanh đậm (#0d1a23).
+Không để chữ bị tách dòng bất thường (ví dụ “PL / AY”). Thiết lập min-width và no-wrap cho nút.
 
-Header: Logo chữ FUTBOL11 (màu vàng và xanh dương) ở giữa trên cùng, 2 icon mạng xã hội (Instagram, Twitter) ở góc phải.
+Thành phần & bố cục cụ thể
 
-Thanh thông báo: Box viền bo tròn, viền vàng, chữ trắng, có link màu xanh dương.
+AppBar/Top Bar
 
-Daily score widget: Hộp nhỏ bo tròn góc, nền xanh đậm, hiển thị điểm (✓ và ✗).
+Nền trong suốt 6% trên dark hoặc màu #0B1220.
 
-Tiêu đề chính: 'Select the football game you want to play:' màu trắng, căn giữa.
+Trái: Logo chữ “90+ (vàng) Quiz” (xanh) – sử dụng font tiêu đề, kerning chặt vừa.
 
-Grid các chế độ chơi: 3 cột dạng thẻ card, mỗi thẻ có:
+Phải: icon profile hình tròn 32 px, có trạng thái bấm (ripple) rõ ràng.
 
-Ảnh minh họa game.
+Padding ngang 24 px, cao 56–64 px; shadow nhẹ (y=10, blur=30, opacity 12%).
 
-Nút PLAY màu xanh đậm, chữ trắng, bo tròn góc.
+Banner cập nhật (Update)
 
-Tên game phía dưới nút.
+Card bo góc 20 px, viền #1F2937, nền #0F172A.
 
-Có nhãn NEW màu vàng trên một số card.
+Trái: icon mũi tên cập nhật/rocket 24 px.
 
-Phong cách: hiện đại, bo tròn góc 2xl, đổ bóng nhẹ, responsive trên mobile, UX tối ưu.
+Nội dung: “New update available” (16 px, Medium) + link “Click here to update” (16 px, Semibold, màu Primary-Blue, có underline khi focus).
 
-Font: Sans-serif, chữ đậm, dễ đọc, màu trắng chủ đạo.
+Phải: nút “Update” (mặc định mờ), text button hoặc ghost button.
 
-Tông màu: Nền xanh đậm, điểm nhấn vàng và xanh dương."
+Có nút đóng (×) 20 px; banner thu gọn sau khi cập nhật hoặc người dùng bấm đóng; ép chiều cao tối đa 88 px.
+
+Khoảng cách với AppBar: 16 px.
+
+Hàng thống kê thắng/thua
+
+Căn trái dưới banner, khoảng cách 16 px.
+
+Ô ✓ Wins: icon check, số 5 (Semibold 18 px) màu Green; Ô ✗ Losses: icon close, số 2 màu Red.
+
+Bọc trong pill nền #111827, bo góc 14 px, padding ngang 12 px, khoảng cách giữa 2 pill 10–12 px.
+
+Có tooltip giải thích (Wins/Losses today). Hỗ trợ đếm lớn (ví dụ 100+) với auto-width.
+
+Tiêu đề phần chọn game
+
+Dòng chữ: “Select the football game you want to play:”
+
+Căn giữa khối nội dung, H2 20–22 px, Semibold, margin-top 16 px, margin-bottom 16–20 px.
+
+Tránh tràn dòng > 2 lines; dùng max-width 85% màn hình.
+
+Danh sách 3 thẻ trò chơi (Cards)
+
+Bố cục 3 card xếp dọc (mobile), giữa mỗi card cách 16–20 px.
+
+Mỗi card: kích thước tối thiểu (full width – 48 px), min-height 160–180 px, nền surface, bo góc 24 px, elevation nhẹ (shadow y=12, blur=40, 12%).
+
+Cấu trúc card (trên→dưới):
+a. Icon minh họa (bóng, áo đấu, sân cỏ…) 32–40 px, góc trái trên.
+b. Card Title (18 px, Semibold) — ví dụ:
+
+“Find Football Player”
+
+“Football Vocabulary Game”
+
+“Team Builder” (kèm badge “NEW” màu vàng #F6C12A, chữ 11–12 px, Bold, pill bo 10 px).
+c. Mô tả ngắn 14–16 px, tối đa 2 dòng, auto-ellipsis:
+
+“Guess the player from teammate clues.”
+
+“Daily player crossword puzzle.”
+
+“Build a team that fits constraints.”
+d. Khu vực CTA:
+
+Nút chính “Play” (không để thành “PL / AY”), height 44–48 px, min-width 96–120 px, bo góc 14–16 px, Primary-Blue nền đặc, chữ white, letter-spacing 0.
+
+Trạng thái: Default / Pressed (90%) / Disabled (60%) / Focus (ring xanh 2 px).
+
+Nút đặt bên phải theo hàng ngang với tiêu đề, hoặc dưới mô tả nếu mô tả dài; luôn giữ không bể chữ trên mọi độ rộng.
+
+Tương tác card: chạm vào vùng card = mở game; chạm CTA = hành động “Play”. Có ripple 12–16% alpha.
+
+Khoảng cách & căn chỉnh
+
+Tất cả text căn theo baseline; lề trái của icon + title + mô tả thẳng hàng.
+
+Không để bất kỳ từ nào bị chia đôi theo chiều dọc; ưu tiên wrap theo khoảng trắng.
+
+Auto layout linh hoạt để nội dung tiếng khác (EN/VI/ES) không vỡ bố cục.
+
+Trạng thái & tình huống đặc biệt
+
+Loading: skeleton cho 3 card (3 thanh title + 2 dòng body giả).
+
+Empty state: nếu chưa có số liệu wins/losses, hiển thị “Let’s play your first game!” cùng icon cúp.
+
+Error: banner đỏ nhạt với icon cảnh báo, mô tả ngắn + nút “Retry”.
+
+Offline: badge “Offline mode” màu xám, nút Play vẫn hoạt động nếu game không cần mạng.
+
+Chuyển động (Motion)
+
+Fade+slide cho banner update (150–200 ms).
+
+Hover/Press card scale 0.98 khi nhấn (120 ms, ease-out).
+
+Nút Play có micro-bounce nhẹ khi xuất hiện (120 ms).
+
+Easing: standard, decelerate theo Material.
+
+Khả dụng & truy cập (A11y)
+
+Mục tiêu chạm ≥ 48×48 px.
+
+Hỗ trợ Dynamic Type (phóng to 120%) không vỡ layout.
+
+Label cho TalkBack: “Play Find Football Player”, “Play Team Builder (New)”,…
+
+Color-blind friendly (không chỉ màu: thêm icon ✓/✗).
+
+Biểu tượng & hình ảnh
+
+Ưu tiên Material Symbols Rounded hoặc bộ icon thể thao nhất quán.
+
+Icon đơn sắc, opacity 80–100% tùy cấp độ nổi bật.
+
+Tránh ảnh bitmap nặng; nếu dùng, bo góc theo card.
+
+Văn bản UI (gợi ý chuẩn hóa)
+
+AppBar: “90+ Quiz” (90+ vàng, Quiz xanh).
+
+Banner: “New update available — Click to update”.
+
+Section: “Select the football game you want to play”.
+
+Cards:
+
+Find Football Player — “Guess the player from teammate hints.”
+
+Football Vocabulary Game — “Daily football crossword.”
+
+Team Builder — “Build a team under constraints.” (Badge NEW).
+
+Kết quả mong muốn
+
+01 khung high-fidelity mockup 1080×2400 px + style tokens (màu, text, radius, shadow).
+
+Xuất thêm biến thể khoảng cách (compact/comfortable).
+
+Bàn giao: file/ảnh mockup + bảng màu + thông số spacing/typography/radius, sẵn sàng cho dev Android/Flutter/Compose.
+
+Tiêu chí chấp nhận
+
+Không còn hiện tượng tách chữ “PL / AY”; bố cục sạch, đồng đều.
+
+Contrast đạt chuẩn; icon/typography nhất quán; các card dễ quét nội dung.
+
+Banner update gọn, không lấn át; số ✓/✗ rõ ràng, cân đối với tiêu đề phần.
+
+Thẩm mỹ thể thao, hiện đại, phù hợp brand 90+ Quiz.
