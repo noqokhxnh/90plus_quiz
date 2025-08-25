@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "737079312122",
+    "project_id": "plsapp-f6a37",
+    "storage_bucket": "plsapp-f6a37.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737079312122:android:144358c16dc8e323879343",
+        "android_client_info": {
+          "package_name": "com.noqok.a90plus_quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737079312122-sdd535opje7g2rs9u96q97p8q41qvn0k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuViVuktYBsTXMRaG8oZp9P4EmDpvNDEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737079312122-sdd535opje7g2rs9u96q97p8q41qvn0k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
