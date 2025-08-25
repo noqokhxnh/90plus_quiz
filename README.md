@@ -1,140 +1,69 @@
-# Rules
-   - Language: Use English for all code comments and documentation and reply by VietNamese.
-   - Follow Java conventions for Android development.
-   - Use meaningful names for variables, methods, and classes.
-   - Keep code readable and well-formatted.
-# Project Structure
-app/
-├── src/main/java/com/yourpackage/
-│   ├── activities/
-│   │   ├── MainActivity.java
-│   │   ├── GameModeActivity.java
-│   │   └── ProfileActivity.java
-│   ├── fragments/
-│   │   ├── Mode1Fragment.java
-│   │   ├── Mode2Fragment.java
-│   │   └── Mode3Fragment.java
-│   ├── adapters/
-│   │   ├── QuestionAdapter.java
-│   │   ├── AnswerAdapter.java
-│   │   └── SquadAdapter.java
-│   ├── models/
-│   │   ├── Player.java
-│   │   ├── Question.java
-│   │   ├── GameSession.java
-│   │   └── User.java
-│   ├── repositories/
-│   │   ├── FirebaseRepository.java
-│   │   └── ApiRepository.java
-│   ├── services/
-│   │   └── FootballApiService.java
-│   └── utils/
-│       ├── GameLogic.java
-│       └── ScoreCalculator.java
+Màu sắc & phong cách tổng thể:
 
+Nền màu xanh đậm (#0d1a23 hoặc tương tự).
 
-# Core Technologies
+Chữ chính màu trắng, một số nút nhấn và điểm nhấn màu vàng (#FFD700) và xanh dương sáng (#00AEEF).
 
-Platform: Android Native Mobile App
-Language: Java
-IDE: Android Studio
-Database: Firebase Firestore
-Authentication: Firebase Auth
-UI Framework: Native Android Views with RecyclerView
-Animations: MotionLayout, Android Animation Framework, Animated Vector Drawable, GIF or Lottie for Android
-Networking: Retrofit (recommended) or Volley
-Image Loading: Glide or Picasso
-Target SDK: API 21+ (Android 5.0+)
+Giao diện phẳng, tối giản, tập trung vào nội dung.
 
-# 🎯 Game Modes
-Mode 1: Find Football Player (Connect Game)
+Thanh đầu trang:
 
-Concept: Guess the name of a football player based on the hints of other players they have played with
-Mechanics:
+Logo FUTBOL11 nằm ở giữa trên cùng, màu vàng và xanh.
 
-Show 3-5 teammate hints
-Increasing hint system (hints range from easy to difficult)
-Multiple choice or text input for answers
-Scores based on the number of hints used
+Góc phải có 2 biểu tượng mạng xã hội: Instagram và Twitter.
 
-Mode 2: Football Vocabulary Game
+Dưới logo có một thanh thông báo "Futbol11 Awards for the 2024/25 Season Vote here" viền vàng, chữ trắng và link chữ màu xanh.
 
-Concept: Daily football player crossword puzzle
-Mechanics:
+Thông tin điểm số hằng ngày (Daily score):
 
-6 guesses of football player names
-Letter feedback system (correct position, incorrect position, incorrect name)
-Change target player daily
-Result sharing feature
+Hộp ở góc phải: nền xanh đậm, hiển thị điểm số ngày với biểu tượng check xanh (✓) và dấu X đỏ (✗).
 
-Mode 3: Team Building
+Tiêu đề chính:
 
-Concept: Build a team with specific constraints
-Mechanics:
+"Select the football game you want to play:" ở giữa, màu trắng.
 
-The system generates a random footballformation (eg: 4-3-3, 4-4-2, 3-4-2-1,...)
-The system displays a random club
-The player fills in the name of the footballer in the blank box, if the footballer fits the missing position on the field, the system will fill the player in the diagram. Then the system displays another club until the player fills in the diagram
+Danh sách các chế độ chơi (Cards Game):
 
+Hiển thị dạng grid 3 cột, nhiều hàng.
 
-# Fooballer Database Structure:
-- Player ID
-- Full Name
-- Position
-- Nationality
-- Current Club
-- Former Clubs
-- Career Statistics
-- Image URL
-# Mobile-Specific Features
-- Android UI Components
+Mỗi ô game gồm:
 
-   Activities: Main screens for each game mode
-   Fragments: Reusable UI components within activities
-   RecyclerView: For smooth scrolling lists and grids
-   ViewPager2: For swipeable screens and onboarding
-   ConstraintLayout: Responsive layouts for different screen sizes
-   Material Design: Following Android design guidelines
+Ảnh minh họa.
 
-- Mobile UX Considerations
+Nút PLAY nền xanh đậm, chữ trắng.
 
-   Touch Gestures: Swipe, tap, long press, drag & drop
-   Screen Orientations: Portrait and landscape support
-   Different Screen Sizes: Phone and tablet optimization
-   Navigation: Bottom navigation or drawer navigation
-   Offline Mode: Cache data for offline gameplay
-   Push Notifications: Daily challenges and reminders
+Tên game: Futbol11 Legacy, Impostor, Grid, Pyramid, Connections, Clubs, Link, Bingo, v.v.
 
-- Mobile Performance
+Một số có nhãn NEW màu vàng (vd: Futbol11 Legacy).
 
-   Memory Management: Efficient RecyclerView usage
-   Battery Optimization: Background task management
-   Network Optimization: Image compression and caching
-   Storage: Internal storage for user data and cache
+Mỗi card thiết kế tối giản, hình ảnh đại diện game là icon nhỏ.
 
-# Lottie Animations
+Prompt để thiết kế app mobile với giao diện tương tự:
 
-Success animations: Goal celebrations, trophy animations
-Loading animations: Football spinning, player running
-Transition animations: Between game modes
-Feedback animations: Correct/incorrect answers
+Prompt (dùng cho AI design như MidJourney hoặc Figma AI plugin):
 
-#  Performance Considerations
+"Thiết kế giao diện mobile app tối giản về trò chơi bóng đá, nền màu xanh đậm (#0d1a23).
 
-Implement caching for frequently accessed data
-Use pagination for large player lists
-Optimize image loading with Glide
-Implement proper memory management for RecyclerViews
-Use ViewBinding for efficient UI updates
+Header: Logo chữ FUTBOL11 (màu vàng và xanh dương) ở giữa trên cùng, 2 icon mạng xã hội (Instagram, Twitter) ở góc phải.
 
-# Security & Best Practices
+Thanh thông báo: Box viền bo tròn, viền vàng, chữ trắng, có link màu xanh dương.
 
-Implement Firebase security rules
-Validate user inputs
-Use ProGuard for code obfuscation
-Implement rate limiting for API calls
-Store sensitive data securely
+Daily score widget: Hộp nhỏ bo tròn góc, nền xanh đậm, hiển thị điểm (✓ và ✗).
 
-## Gemini Added Memories
-- The football-data.org API key is 1dc6a8038f804c579ad9ab40cdb12b4f
+Tiêu đề chính: 'Select the football game you want to play:' màu trắng, căn giữa.
 
+Grid các chế độ chơi: 3 cột dạng thẻ card, mỗi thẻ có:
+
+Ảnh minh họa game.
+
+Nút PLAY màu xanh đậm, chữ trắng, bo tròn góc.
+
+Tên game phía dưới nút.
+
+Có nhãn NEW màu vàng trên một số card.
+
+Phong cách: hiện đại, bo tròn góc 2xl, đổ bóng nhẹ, responsive trên mobile, UX tối ưu.
+
+Font: Sans-serif, chữ đậm, dễ đọc, màu trắng chủ đạo.
+
+Tông màu: Nền xanh đậm, điểm nhấn vàng và xanh dương."
